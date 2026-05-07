@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diego Caudillo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── HERO ── */
+  #about { padding: 5rem 0 3.5rem; border-bottom: 1px solid var(--rule); }
+  .kicker {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 4.2rem);
+    font-weight: 400; line-height: 1.1; color: var(--accent); margin-bottom: 1.75rem;
+  }
+  h1 em { font-style: italic; color: var(--text-muted); }
+
+
+  /* ── SECTION CARDS ── */
+  .section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+  .section-card {
+    display: block; text-decoration: none;
+    border: 1px solid var(--rule); border-radius: 3px;
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.15s, background 0.15s;
+    background: transparent;
+  }
+  .section-card:hover {
+    border-color: rgba(231,29,54,0.3);
+    background: var(--punch-dim);
+  }
+  .section-card:hover .card-title { color: var(--punch); }
+  .card-label {
+    font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.4rem;
+  }
+  .card-title {
+    font-family: var(--serif); font-size: 1.25rem; font-weight: 500;
+    color: var(--accent); line-height: 1.2; transition: color 0.15s;
+  }
+  .card-desc {
+    font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted);
+    margin-top: 0.5rem; line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="site-name">diego.caudillo</a>
+    <ul>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="research.html">Research</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="wrap">
+    <p class="kicker">Time Series &middot; Recommender Systems &middot; Graphs and Networks</p>
+    <h1>Diego Caudillo, PhD </h1>
+
+    <div style="display:flex; gap:2rem; align-items:flex-start;">
+  <img src="IMG_8859.jpeg" alt="Diego meets The Beatles"
+       style="width:360px; height:250px; border-radius:12px; object-fit:cover; flex-shrink:0;">
+  <p style="font-size:15px; line-height:1.8; margin:0;">
+    Diego Caudillo is an applied mathematician and data scientist with a decade of 
+    international experience spanning recommender systems, time series analysis, and machine learning
+    on graph-structured data. <br/>
+    
+    He holds a PhD in Mathematics from the Norwegian University of
+    Science and Technology (NTNU, 2025), where his research addressed the 
+    mathematical foundations of machine learning on graph-structured and sequential data. 
+    Before the doctorate, he worked as a data science consultant at C3 Consensus International, 
+    advising industrial, logistics, and public-sector clients across Mexico and the United States. <br/>
+    
+    His academic formation includes an MSc in Probability and Statistics (CIMAT, Mexico) and a 
+    BSc in Mathematical Computing (University of Guanajuato), with early formation in 
+    competitive programming at the international stage, such as IOI, CIIC, and ACM-ICPC. <br/>
+    
+    Diego speaks Spanish, English, Norwegian, and is learning French. 
+    He has worked in Norway, Canada, New Zealand, Germany, and Mexico.<br/>
+    
+    His current focus is research-oriented roles in industry, 
+    at the intersection of applied mathematics, machine learning, and real-world complexity.</p>
+
+    </div>
+    <div style="margin-bottom: 2.5rem;"></div>
+
+    <div class="links-row">
+      <a href="https://www.linkedin.com/in/diegocaudilloamador/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/diegocaudillo" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.kaggle.com/diegocaudillono" target="_blank" rel="noopener">Kaggle</a>
+      <a href="https://huggingface.co/dcaudillo" target="_blank" rel="noopener">Hugging Face</a>
+      <a href="https://leetcode.com/u/0gODHWwfIW/" target="_blank" rel="noopener">LeetCode</a>
+      <a href="https://orcid.org/0000-0001-5652-9534" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.researchgate.net/profile/Diego_Caudillo" target="_blank" rel="noopener">ResearchGate</a>
+      <a href="https://scholar.google.com/citations?user=xFqUCs0AAAAJ" target="_blank" rel="noopener">Scholar</a>
+      <a href="mailto:caudillo.math@gmail.com" class="email">caudillo.math@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ASSOCIATIONS ── -->
+<section id="associations">
+  <div class="wrap">
+    <h2>Positions &amp; Affiliations</h2>
+    <ul class="assoc-list">
+      <li><strong>NTNU</strong> PhD Mathematics, 2020–2025 &middot; Norway</li>
+      <li><strong>CIMAT</strong> MSc Probability &amp; Statistics, 2017–2019 &middot; Mexico</li>
+      <li><strong>Univ. of Guanajuato</strong> BSc Mathematical Computing, 2010–2016 &middot; Mexico</li>
+      <li><strong>C3 Consensus</strong> Data Science Consultant, 2016–2017 &middot; Mexico</li>
+      <li><strong>Univ. of Greifswald</strong> Visiting Researcher, 2024 &middot; Germany</li>
+      <li><strong>Fields Institute</strong> Research Stay, 2014 &middot; Canada</li>
+      <li><strong>Univ. of Auckland</strong> Research Intern, 2012–2013 &middot; New Zealand</li>
+      <li><strong>ACPMS</strong> Session Chair and Attendant, 2022-2024</li>
+      <li><strong>OIEG</strong> Chief Officer, 2011–2012</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; <span id="yr"></span> Diego Caudillo Amador &middot; no tracking &middot; no cookies
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
