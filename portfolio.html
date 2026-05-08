@@ -3,11 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Diego Caudillo</title>
+<title>Past Projects — Diego Caudillo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .filter-bar { padding: 1.25rem 0 0; }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.6rem; }
+  .filter-row:last-child { margin-bottom: 0; }
+  .filter-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted, #888); align-self: center;
+    min-width: 5.5rem; }
+  .fbtn { font-family: 'DM Mono', monospace; font-size: 0.7rem; padding: 0.2rem 0.65rem;
+    border: 1px solid currentColor; border-radius: 2px; cursor: pointer;
+    background: transparent; text-decoration: none; color: inherit; opacity: 0.45;
+    transition: opacity 0.15s; }
+  .fbtn:hover { opacity: 0.75; }
+  .fbtn.on { opacity: 1; }
+  .entry.hidden { display: none; }
+  .no-match { display: none; font-family: 'DM Mono', monospace; font-size: 0.8rem;
+    color: var(--muted, #888); padding: 2rem 0; }
+  .no-match.visible { display: block; }
+</style>
 </head>
 <body>
 
@@ -23,20 +41,376 @@
 
 <div class="page-header">
   <div class="wrap">
-    <p class="kicker">Applied work</p>
-    <h1>Data Science Portfolio</h1>
-    <div class="sub-nav">
-      <a href="#nlp">NLP &amp; Text</a>
-      <a href="#graphs">Graphs &amp; Networks</a>
-      <a href="#statistics">Statistics</a>
-      <a href="#computing">Scientific Computing</a>
+    <p class="kicker">Selected work</p>
+    <h1>Past Projects</h1>
+
+    <div class="filter-bar">
+      <div class="filter-row">
+        <span class="filter-label">Area</span>
+        <a href="#" class="fbtn on" data-type="cat" data-val="all">All</a>
+        <a href="#" class="fbtn" data-type="cat" data-val="ds">Data Science &amp; Statistics</a>
+        <a href="#" class="fbtn" data-type="cat" data-val="sc">Scientific Computing</a>
+        <a href="#" class="fbtn" data-type="cat" data-val="pm">Pure Mathematics</a>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label">Topic</span>
+        <a href="#" class="fbtn" data-type="tag" data-val="nlp">NLP &amp; Text</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="graphs">Graphs</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="computer-vision">Computer Vision</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="low-level">Low-Level Programming</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="statistics">Statistics</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="combinatorics">Combinatorics &amp; Data Structures</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="numerics">Numerics</a>
+        <a href="#" class="fbtn" data-type="tag" data-val="other">Other</a>
+      </div>
     </div>
   </div>
 </div>
 
+<section id="projects">
+  <div class="wrap">
+    <div class="entry-list">
 
+      <div class="entry"
+           data-cat="ds"
+           data-tags="graphs combinatorics other">
+        <span class="entry-year">2025</span>
+        <div>
+          <h3>Machine Learning via Iterated Integral Signatures</h3>
+          <p>Ten-day independent research sprint on an unfamiliar topic, presented as the PhD trial lecture at NTNU.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">signatures</span>
+            <span class="tag">machine learning</span>
+            <span class="tag">sequential data</span>
+            <span class="tag">NTNU</span>
+          </p>
+        </div>
+      </div>
 
-  
+      <div class="entry"
+           data-cat="pm"
+           data-tags="combinatorics">
+        <span class="entry-year">2023–24</span>
+        <div>
+          <h3>Cumulants of Quasi-Shuffle Products</h3>
+          <p>PhD contribution in algebraic combinatorics.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">algebraic combinatorics</span>
+            <span class="tag">Hopf algebras</span>
+            <span class="tag">NTNU</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="graphs combinatorics statistics">
+        <span class="entry-year">2022–23</span>
+        <div>
+          <h3>Graph Counting Kernels Extended to Hypergraphs</h3>
+          <p>Determined which structural properties make for a good kernel and which do not, in the hypergraph setting.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">kernel methods</span>
+            <span class="tag">graph theory</span>
+            <span class="tag">hypergraphs</span>
+            <span class="tag">NTNU</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="pm"
+           data-tags="combinatorics">
+        <span class="entry-year">2021–22</span>
+        <div>
+          <h3>Efficient Algorithm for Counting Rooted Trees</h3>
+          <p>Combinatorial open problem; ongoing.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">combinatorics</span>
+            <span class="tag">algorithms</span>
+            <span class="tag">NTNU</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="pm"
+           data-tags="statistics">
+        <span class="entry-year">2021</span>
+        <div>
+          <h3>Itô's Formula for Matrices and Operators</h3>
+          <p>Operator stochastic calculus; class project.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">stochastic calculus</span>
+            <span class="tag">operator theory</span>
+            <span class="tag">NTNU</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="numerics">
+        <span class="entry-year">2021</span>
+        <div>
+          <h3>Apollo 13 Orbits via Adaptive Runge–Kutta</h3>
+          <p>Numerical ODE integration of the Apollo 13 return trajectory. Classroom showcase for 800 students at NTNU.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">numerical methods</span>
+            <span class="tag">ODEs</span>
+            <span class="tag">NTNU</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="pm"
+           data-tags="statistics combinatorics">
+        <span class="entry-year">2019</span>
+        <div>
+          <h3>Concentration Inequalities for Sparse Random Matrices</h3>
+          <p>MSc thesis core; mini-course delivered to researchers.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">random matrices</span>
+            <span class="tag">probability</span>
+            <span class="tag">CIMAT</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="statistics">
+        <span class="entry-year">2018</span>
+        <div>
+          <h3>Upper Bound in the Weibull Domain of Attraction</h3>
+          <p>Poster and presentation directed at general public.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">extreme value theory</span>
+            <span class="tag">statistics</span>
+            <span class="tag">CIMAT</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="nlp">
+        <span class="entry-year">2016–17</span>
+        <div>
+          <h3>Social Media Sentiment Analysis</h3>
+          <p>Developed from scratch an NLP pipeline to monitor online discussions; created a reliable tool whose reports were given to decision-makers.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">NLP</span>
+            <span class="tag">sentiment analysis</span>
+            <span class="tag">consulting</span>
+            <span class="tag">C3 Consensus</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="graphs">
+        <span class="entry-year">2016–17</span>
+        <div>
+          <h3>Graph-Based Targeted Marketing</h3>
+          <p>Increased the effectiveness of messages and campaigns.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">graph methods</span>
+            <span class="tag">marketing</span>
+            <span class="tag">consulting</span>
+            <span class="tag">C3 Consensus</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="statistics other">
+        <span class="entry-year">2016</span>
+        <div>
+          <h3>Benchmarking Recommendation Systems</h3>
+          <p>One of the first texts in Spanish on Machine Learning. 250+ reads.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">recommender systems</span>
+            <span class="tag">machine learning</span>
+            <span class="tag">CIMAT</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="statistics">
+        <span class="entry-year">2016</span>
+        <div>
+          <h3>Adaptive Threshold vs. Graphical Lasso</h3>
+          <p>Produced a simpler and 20× faster alternative to EM-Lasso.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">lasso</span>
+            <span class="tag">sparse estimation</span>
+            <span class="tag">CIMAT</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="pm"
+           data-tags="combinatorics other">
+        <span class="entry-year">2014</span>
+        <div>
+          <h3>Quantifier Elimination in C*-Algebras</h3>
+          <p>Independent research in logic and operator algebras.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">logic</span>
+            <span class="tag">operator algebras</span>
+            <span class="tag">Fields Institute</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="statistics other">
+        <span class="entry-year">2014</span>
+        <div>
+          <h3>Ensemble Methods for Stable Fullerene Search</h3>
+          <p>Eight-fold speedup for computing predicted-stability.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">ensemble methods</span>
+            <span class="tag">computational chemistry</span>
+            <span class="tag">UG / CIMAT / UAdY</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="computer-vision graphs">
+        <span class="entry-year">2013</span>
+        <div>
+          <h3>Image Segmentation via Belief Propagation</h3>
+          <p>Featured in Klette's <em>Concise Computer Vision</em>.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">computer vision</span>
+            <span class="tag">belief propagation</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="computer-vision">
+        <span class="entry-year">2013</span>
+        <div>
+          <h3>Curved Surface Flattening from Static Images</h3>
+          <p>Proof of concept; commissioned work.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">computer vision</span>
+            <span class="tag">image processing</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="ds"
+           data-tags="computer-vision statistics">
+        <span class="entry-year">2012–13</span>
+        <div>
+          <h3>Comparing Performance of Stereo Vision Models</h3>
+          <p>Computer vision research at the University of Auckland. Resulted in a journal article in <em>Pattern Recognition</em> and two conference papers.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">computer vision</span>
+            <span class="tag">benchmarking</span>
+            <span class="tag">University of Auckland</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="computer-vision low-level">
+        <span class="entry-year">2012</span>
+        <div>
+          <h3>Image Segmentation: Gauss–Seidel in CUDA</h3>
+          <p>From 3 minutes to 80 ms per VGA frame (~2,500× speedup).</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">CUDA</span>
+            <span class="tag">image processing</span>
+            <span class="tag">parallelisation</span>
+            <span class="tag">UG</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="combinatorics numerics">
+        <span class="entry-year">2011</span>
+        <div>
+          <h3>Delaunay Triangulation for Geodata Visualisation</h3>
+          <p>From-scratch implementation; class project.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">computational geometry</span>
+            <span class="tag">geodata</span>
+            <span class="tag">UG</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="low-level">
+        <span class="entry-year">2010–12</span>
+        <div>
+          <h3>Linux From Scratch</h3>
+          <p>Created and maintained an IT-homelab; compiled from source.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">systems</span>
+            <span class="tag">Linux</span>
+            <span class="tag">independent</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="computer-vision low-level">
+        <span class="entry-year">2010</span>
+        <div>
+          <h3>Specular and Albedo Shaders for 3D Rendering</h3>
+          <p>Independent rendering implementation.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">3D graphics</span>
+            <span class="tag">shaders</span>
+            <span class="tag">UG</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="entry"
+           data-cat="sc"
+           data-tags="low-level other">
+        <span class="entry-year">2009–12</span>
+        <div>
+          <h3>Competitive Programming Evaluation Platform</h3>
+          <p>Created and maintained a full-stack sandboxed online judge system for a regional olympiad of ~6,000 participants.</p>
+          <p style="margin-top:0.4rem">
+            <span class="tag">full-stack</span>
+            <span class="tag">systems</span>
+            <span class="tag">competitive programming</span>
+            <span class="tag">OIEG</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="no-match" id="no-match">No projects match the current filter combination.</p>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <a href="index.html">← Back</a>
@@ -45,6 +419,61 @@
   </div>
 </footer>
 
-<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+(function () {
+  var activeCat = 'all';
+  var activeTags = [];
+
+  var catBtns = document.querySelectorAll('.fbtn[data-type="cat"]');
+  var tagBtns = document.querySelectorAll('.fbtn[data-type="tag"]');
+  var entries = document.querySelectorAll('#projects .entry');
+  var noMatch = document.getElementById('no-match');
+
+  function apply() {
+    var visible = 0;
+    entries.forEach(function (e) {
+      var cat = e.getAttribute('data-cat');
+      var tags = e.getAttribute('data-tags').split(' ');
+      var catOk = activeCat === 'all' || cat === activeCat;
+      var tagsOk = activeTags.every(function (t) { return tags.indexOf(t) !== -1; });
+      if (catOk && tagsOk) {
+        e.classList.remove('hidden');
+        visible++;
+      } else {
+        e.classList.add('hidden');
+      }
+    });
+    noMatch.classList.toggle('visible', visible === 0);
+  }
+
+  catBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      activeCat = btn.getAttribute('data-val');
+      catBtns.forEach(function (b) { b.classList.remove('on'); });
+      btn.classList.add('on');
+      apply();
+    });
+  });
+
+  tagBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var val = btn.getAttribute('data-val');
+      var idx = activeTags.indexOf(val);
+      if (idx === -1) {
+        activeTags.push(val);
+        btn.classList.add('on');
+      } else {
+        activeTags.splice(idx, 1);
+        btn.classList.remove('on');
+      }
+      apply();
+    });
+  });
+})();
+</script>
 </body>
 </html>
